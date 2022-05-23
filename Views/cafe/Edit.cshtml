@@ -1,0 +1,49 @@
+﻿@model _2121_wave_cafe.Models.cafe
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+<link href="~/css/tooplate-wave-cafe.css" rel="stylesheet" />
+
+<h4>cafe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="TênSP" class="control-label"></label>
+                <input asp-for="TênSP" class="form-control" />
+                <span asp-validation-for="TênSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgàyNhập" class="control-label"></label>
+                <input asp-for="NgàyNhập" class="form-control" />
+                <span asp-validation-for="NgàyNhập" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SốLượng" class="control-label"></label>
+                <input asp-for="SốLượng" class="form-control" />
+                <span asp-validation-for="SốLượng" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GiáTiền" class="control-label"></label>
+                <input asp-for="GiáTiền" class="form-control" />
+                <span asp-validation-for="GiáTiền" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

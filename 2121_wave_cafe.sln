@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2121_wave_cafe", "2121_wave_cafe.csproj", "{471274D1-187E-4802-8A9E-6068DBC7CF8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB31C1BC-093F-4305-A886-6B56058C9F80}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{471274D1-187E-4802-8A9E-6068DBC7CF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471274D1-187E-4802-8A9E-6068DBC7CF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471274D1-187E-4802-8A9E-6068DBC7CF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471274D1-187E-4802-8A9E-6068DBC7CF8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4FAAFD3-C78E-4312-9E50-FEF0948B91F2}
+	EndGlobalSection
+EndGlobal

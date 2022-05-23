@@ -1,0 +1,79 @@
+﻿@model _2121_wave_cafe.Models.cafesoluong
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Cafe HTML Template by Tooplate</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="css/tooplate-wave-cafe.css">
+    <!--
+    Tooplate 2121 Wave Cafe
+    https://www.tooplate.com/view/2121-wave-cafe
+    -->
+</head>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="cafe" asp-action="Index" method="get">
+    <p>
+        <select asp-for="cafeSốLượng" asp-items="Model.SốLượng">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cafes[0].TênSP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cafes[0].NgàyNhập)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cafes[0].SốLượng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cafes[0].GiáTiền)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cafes[0].NhậnXét)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.cafes)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TênSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgàyNhập)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SốLượng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiáTiền)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhậnXét)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
